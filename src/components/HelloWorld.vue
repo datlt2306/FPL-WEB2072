@@ -5,20 +5,13 @@ defineProps({
   msg: String,
 })
 
-const count = ref(0);
-const isStatus = ref(true);
-
-const changeStatus = () => {
-  isStatus.value = false
-}
+const count = ref(0)
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    {{ isStatus ? 'Open' : 'Close' }}
-    <button type="button" @click="changeStatus()">toggle status</button>
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
       Edit
