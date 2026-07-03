@@ -1,17 +1,25 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, reactive } from 'vue';
 
-const profile = ref({
+const profile = reactive({
   name: "Dat", age: 20
 });
-const isActive = ref(true);
+const handleSubmit = () => console.log(profile.name)
 </script>
 <template>
-  <div :class="{ hidden: isActive }">
-    {{ profile.name }}
+  <div>
+    {{ profile.name }} - {{ profile.age }}
   </div>
-  <button @click="isActive = !isActive">Toggle</button>
+  <input type="text" v-model="profile.name">
+  <input type="text" v-model="profile.age">
+  <form @submit.prevent="handleSubmit">
+    <button type="submit">submit</button>
+  </form>
 </template>
+<!-- 
+document.querySelector('#form').addEventListener('submit', (e) => {
+e.preventDefault() // reload
+}) -->
 <style scoped>
 .hidden {
   display: none;
