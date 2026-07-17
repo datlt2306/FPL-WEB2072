@@ -1,8 +1,37 @@
 <script setup>
+import { reactive } from "vue";
 import Banner from "./components/Banner.vue";
 import FeatureProduct from "./components/FeatureProduct.vue";
 import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
+import UserProfile from "./components/UserProfile.vue";
+
+const products = reactive([
+    {
+        name: "Tai Nghe Vanguard Studio",
+        description: "Tai nghe chất lượng cao cho trải nghiệm âm thanh sống động.",
+        price: 1500000,
+        status: "Còn hàng",
+    },
+    {
+        name: "Balo Vanguard Urban",
+        description: "Balo thiết kế tối giản, phù hợp cho đi học và đi làm.",
+        price: 900000,
+        status: "Còn hàng",
+    },
+    {
+        name: "Đồng Hồ Vanguard Chrono",
+        description: "Đồng hồ thời trang sang trọng, chống nước, mặt kính sapphire.",
+        price: 2200000,
+        status: "Hết hàng",
+    },
+    {
+        name: "Sạc Dự Phòng Vanguard PowerGo",
+        description: "Sạc dự phòng siêu mỏng, dung lượng 10,000mAh.",
+        price: 450000,
+        status: "Còn hàng",
+    },
+]);
 </script>
 <template>
     <div class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
@@ -14,7 +43,7 @@ import Header from "./components/Header.vue";
             <!-- Hero Banner Section -->
             <Banner />
             <!-- Featured Products Section -->
-            <FeatureProduct />
+            <FeatureProduct :data="products" />
         </main>
         <Footer />
     </div>
