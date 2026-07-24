@@ -11,6 +11,8 @@
       "id": 1,
       "name": "Tai Nghe Vanguard Studio",
       "price": 1500000,
+      "category": "Tai nghe",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&auto=format&fit=crop&q=80",
       "quantity": 10,
       "status": "Còn hàng",
       "description": "Tai nghe cao cấp với âm thanh vòm sống động"
@@ -19,6 +21,8 @@
       "id": 2,
       "name": "Balo Vanguard Urban",
       "price": 900000,
+      "category": "Balo",
+      "image": "https://images.unsplash.com/photo-1627124765138-b6b77e815b3c?w=100&auto=format&fit=crop&q=80",
       "quantity": 5,
       "status": "Còn hàng",
       "description": "Balo thời trang phù hợp đi làm và du lịch"
@@ -27,6 +31,8 @@
       "id": 3,
       "name": "Đồng Hồ Vanguard Chrono",
       "price": 2200000,
+      "category": "Đồng hồ",
+      "image": "https://images.unsplash.com/photo-1522312346375-d6e2219bdde5?w=100&auto=format&fit=crop&q=80",
       "quantity": 0,
       "status": "Hết hàng",
       "description": "Đồng hồ thể thao đa năng, chống nước"
@@ -35,6 +41,8 @@
       "id": 4,
       "name": "Sạc Dự Phòng Vanguard PowerGo",
       "price": 450000,
+      "category": "Sạc dự phòng",
+      "image": "https://images.unsplash.com/photo-1526178613557-248f67559028?w=100&auto=format&fit=crop&q=80",
       "quantity": 20,
       "status": "Còn hàng",
       "description": "Pin dự phòng 20000mAh, hỗ trợ sạc nhanh"
