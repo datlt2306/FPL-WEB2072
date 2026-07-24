@@ -143,11 +143,11 @@ onMounted(() => {
                                     <td class="px-6 py-4 font-semibold text-slate-500">{{ product.quantity }} chiếc</td>
                                     <td class="px-6 py-4 text-center">
                                         <div class="flex items-center justify-center space-x-2">
-                                            <a href="admin-product-edit.html"
+                                            <router-link to="/admin/product/edit"
                                                 class="p-2 text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors"
                                                 title="Sửa">
                                                 <i data-lucide="edit-2" class="w-4 h-4"></i>
-                                            </a>
+                                            </router-link>
                                             <button
                                                 class="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors"
                                                 title="Xóa">
