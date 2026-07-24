@@ -97,11 +97,11 @@ onMounted(() => {
                             class="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-indigo-500 bg-white text-sm shadow-sm transition-all" />
                     </div>
 
-                    <a href="admin-product-create.html"
+                    <router-link to="/admin/products/add"
                         class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-md transition-all flex items-center space-x-2">
                         <i data-lucide="plus" class="w-4 h-4"></i>
                         <span>Thêm sản phẩm mới</span>
-                    </a>
+                    </router-link>
                 </div>
 
                 <!-- Product List Table -->
