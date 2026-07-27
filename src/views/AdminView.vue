@@ -14,9 +14,7 @@ const fetchProducts = async () => {
         console.log(error.message);
     }
 }
-onMounted(() => {
-    fetchProducts();
-})
+fetchProducts();
 
 </script>
 <template>
@@ -143,10 +141,10 @@ onMounted(() => {
                                     <td class="px-6 py-4 font-semibold text-slate-500">{{ product.quantity }} chiếc</td>
                                     <td class="px-6 py-4 text-center">
                                         <div class="flex items-center justify-center space-x-2">
-                                            <router-link to="/admin/product/edit"
+                                            <router-link :to="`/admin/products/${product.id}/edit`"
                                                 class="p-2 text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors"
                                                 title="Sửa">
-                                                <i data-lucide="edit-2" class="w-4 h-4"></i>
+                                                Sửa
                                             </router-link>
                                             <button
                                                 class="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors"

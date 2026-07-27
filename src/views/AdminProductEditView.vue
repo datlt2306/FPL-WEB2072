@@ -1,8 +1,10 @@
 <script setup>
 import { ref } from 'vue';
+import { useRoute } from 'vue-router';
 
+const route = useRoute();
 
-
+const id = route.params.id;
 const product = ref({
     name: "",
     category: "",
@@ -10,10 +12,24 @@ const product = ref({
     stock: 0,
     image: ""
 });
+const fetchProduct = async () => {
+    try {
+        const response = await fetch(`http://localhost:3000/products/${id}`);
+        if (!response.ok) {
+            throw new Error('Fetch Fail');
+        }
+        const data = await response.json();
+        product.value = data;
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+fetchProduct();
+
 
 const handleSubmit = async () => {
-    await fetch(`http://localhost:3000/products`, {
-        method: "POST",
+    await fetch(`http://localhost:3000/products/${id}`, {
+        method: "PUT",
         headers: {
             "Content-Type": "application/json"
         },
@@ -76,7 +92,7 @@ const handleSubmit = async () => {
                     <a href="admin-product-list.html" class="text-slate-400 hover:text-slate-600 transition-colors">
                         <i data-lucide="arrow-left" class="w-5 h-5"></i>
                     </a>
-                    <h2 class="text-base font-bold text-slate-800">Thêm sản phẩm mới</h2>
+                    <h2 class="text-base font-bold text-slate-800">Cập nhật sản phẩm mới</h2>
                 </div>
 
                 <div class="flex items-center space-x-4">

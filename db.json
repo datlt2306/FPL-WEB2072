@@ -9,13 +9,14 @@
   "products": [
     {
       "id": 1,
-      "name": "Tai Nghe Vanguard Studio",
+      "name": "Tai Nghe Vanguard Studio update 11232312",
       "price": 1500000,
-      "category": "Tai nghe",
+      "category": "Âm thanh",
       "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&auto=format&fit=crop&q=80",
       "quantity": 10,
       "status": "Còn hàng",
-      "description": "Tai nghe cao cấp với âm thanh vòm sống động"
+      "description": "Tai nghe cao cấp với âm thanh vòm sống động",
+      "stock": 123
     },
     {
       "id": 2,
