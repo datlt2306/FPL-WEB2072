@@ -3,5 +3,9 @@ import './style.css'
 // component
 import App from './App.vue'
 import router from './router/index.js'
+import { VueQueryPlugin } from '@tanstack/vue-query'
 
-createApp(App).use(router).mount('#app')
+createApp(App)
+    .use(router)
+    .use(VueQueryPlugin)
+    .mount('#app')

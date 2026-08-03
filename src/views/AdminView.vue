@@ -1,21 +1,38 @@
 <script setup>
+import { useQuery } from '@tanstack/vue-query';
 import { onMounted, reactive, ref } from 'vue';
-const products = ref([]);
+// const products = ref([]);
+// const isLoading = ref(true);
+// const error = ref("");
 
-const fetchProducts = async () => {
-    try {
+// const fetchProducts = async () => {
+//     try {
+//         const response = await fetch(`http://localhost:3000/products`);
+//         if (!response.ok) {
+//             throw new Error('Fetch Fail');
+//         }
+//         const data = await response.json();
+//         products.value = data;
+//     } catch (errorMessage) {
+//         error.value(error.message);
+//     }
+// }
+// fetchProducts();
+
+
+const { data: products, isLoading, error } = useQuery({
+    queryKey: ['PRODUCTS'],
+    queryFn: async () => {
         const response = await fetch(`http://localhost:3000/products`);
         if (!response.ok) {
             throw new Error('Fetch Fail');
         }
-        const data = await response.json();
-        products.value = data;
-    } catch (error) {
-        console.log(error.message);
+        return await response.json();
     }
-}
-fetchProducts();
-
+})
+// cài đặt npm i @tanstack/vue-query
+// sử dụng vueQueryPlugin ở main.js
+// sử dụng userQuery call Api
 </script>
 <template>
     <div class="bg-slate-50 text-slate-800 flex h-screen overflow-hidden">
